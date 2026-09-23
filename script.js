@@ -306,12 +306,11 @@
   });
 
   /* ---------- quest log tabs ---------- */
-  const tabs = $$(".quest-tab"), panels = $$(".quest-panel"), circle = $(".circle-mark");
+  const tabs = $$(".quest-tab"), panels = $$(".quest-panel"), indicator = $(".quest-indicator");
   function selectQuest(i) {
     tabs.forEach((t, j) => { t.classList.toggle("active", i === j); t.setAttribute("aria-selected", i === j); });
     panels.forEach((p, j) => p.classList.toggle("active", i === j));
-    circle.style.left = i * 25 + "%";
-    circle.classList.remove("draw"); void circle.getBoundingClientRect(); circle.classList.add("draw");
+    indicator.style.left = i * 25 + "%";
   }
   tabs.forEach((t, i) => t.addEventListener("click", () => selectQuest(i)));
   selectQuest(0);
