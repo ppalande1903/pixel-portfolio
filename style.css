@@ -684,3 +684,6 @@ img { max-width: 100%; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* quest log title in the same y2k screen font as its tabs */
+.notebook .display { font-family: var(--f-vt); font-size: clamp(3.2rem, 7vw, 5rem); line-height: .9; letter-spacing: .04em; }
