@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prachiti Palande · Portfolio</title>
+  <meta name="description" content="Prachiti Palande — AI & Data Science. M.Sc. Computer Science at University College Dublin. GenAI, ML, document intelligence and automation." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍒</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Serif+Display:ital@0;1&family=Press+Start+2P&family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ BOOT / START SCREEN ============ -->
+  <div id="boot" role="dialog" aria-label="Start screen">
+    <canvas id="stars"></canvas>
+    <div class="boot-hud">
+      <span>XP: AI/DS LEVEL 25</span>
+      <span class="hud-hp">♥ <i class="hp"><b></b></i> PLAYER 01</span>
+    </div>
+    <div class="boot-frame">
+      <p class="boot-year">2026</p>
+      <h1 class="boot-title">PORTFOLIO</h1>
+      <button id="startBtn" class="start-btn">START</button>
+      <p class="boot-hint">press <kbd>ENTER</kbd> or click start</p>
+    </div>
+    <div class="boot-ground">
+      <div class="pixel-avatar walker" data-scale="5"></div>
+      <span class="boot-cat">🐈</span>
+      <span class="boot-tree">🌳</span>
+    </div>
+  </div>
+
+  <!-- ============ TOP TICKER ============ -->
+  <div class="ticker top-ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>✦ NEW PLAYER ALERT!</span><span>✦ NOW ENROLLED: M.SC. COMPUTER SCIENCE @ UCD</span><span>✦ OPEN TO AI / DATA ROLES IN IRELAND</span><span>✦ GPA 9.01 / 10</span><span>✦ CLICK THE STICKERS TO COLLECT COINS</span>
+      <span>✦ NEW PLAYER ALERT!</span><span>✦ NOW ENROLLED: M.SC. COMPUTER SCIENCE @ UCD</span><span>✦ OPEN TO AI / DATA ROLES IN IRELAND</span><span>✦ GPA 9.01 / 10</span><span>✦ CLICK THE STICKERS TO COLLECT COINS</span>
+    </div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <nav class="nav-inner">
+      <div class="nav-links left">
+        <a href="#about">About</a>
+        <a href="#quests">Quest Log</a>
+      </div>
+      <a href="#home" class="logo">prachiti<span>.exe</span></a>
+      <div class="nav-links right">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <span class="coins" title="Coins collected"><span class="coin-ico">●</span> <b id="coinCount">0</b></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="xp" aria-hidden="true">
+    <span class="xp-label">XP · LVL <b id="lvl">00</b></span>
+    <div class="xp-bar"><div id="xpFill"></div></div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero grid-paper">
+      <span class="sticker s1" data-depth="18">🍒</span>
+      <span class="sticker s2" data-depth="30">⭐</span>
+      <span class="sticker s3" data-depth="12">🍬</span>
+      <span class="sticker s4" data-depth="24">🦋</span>
+      <span class="sticker s5" data-depth="16">💖</span>
+      <span class="sticker s6" data-depth="28">🌸</span>
+      <span class="sticker s7" data-depth="20">💾</span>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow">(BASED IN DUBLIN, IRELAND)</p>
+        <h1 class="display">The Data Scientist <br />of Your <em class="wiggle-word">Dreams</em></h1>
+        <p class="lede">
+          Hi, I'm <strong>Prachiti Palande</strong>. I'm an AI &amp; Data Science grad doing my M.Sc. in Computer Science at
+          <strong>University College Dublin</strong>. I build GenAI prototypes, document-intelligence pipelines and
+          automations that turn messy data into sweet little solutions.
+        </p>
+        <div class="hero-ctas">
+          <a href="#about" class="btn btn-lav">Press start →</a>
+          <a href="assets/Prachiti_Palande_Resume.pdf" class="btn btn-maroon" id="resumeBtn" download>Download résumé</a>
+        </div>
+        <div class="squiggle" aria-hidden="true">
+          <svg viewBox="0 0 160 70"><path d="M10 20 C 40 -5, 60 55, 35 45 C 15 38, 40 10, 70 30 S 120 55, 150 40" /><path d="M138 30 L150 40 L136 50" /></svg>
+        </div>
+      </div>
+
+      <div class="hero-art reveal">
+        <div class="window hero-win draggable">
+          <div class="titlebar"><span>♥ cute.exe</span><span class="ctrls"><i>_</i><i>□</i><i class="x">×</i></span></div>
+          <div class="win-body screen-green">
+            <div class="pixel-avatar bob" data-scale="9"></div>
+            <span class="twinkle t1">✦</span><span class="twinkle t2">✦</span><span class="twinkle t3">★</span>
+          </div>
+        </div>
+        <div class="window msg-win draggable">
+          <div class="titlebar lav"><span>new message!</span><span class="ctrls"><i class="x">×</i></span></div>
+          <div class="win-body">
+            <p>💌 you have (1) new message</p>
+            <p class="typer" data-text="thanks 4 stopping by! scroll down to meet the player ↓"></p>
+            <a href="#about" class="btn btn-mini">ok</a>
+          </div>
+        </div>
+        <div class="window np-win draggable">
+          <div class="titlebar pink"><span>now playing</span><span class="ctrls"><i class="x">×</i></span></div>
+          <div class="win-body np">
+            <div>
+              <b>gradient_descent.mp3</b><br /><small>by the loss function</small>
+            </div>
+            <div class="eq"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <p class="handwritten catch">catch me if <br />you can(dy)!</p>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee lav-band" aria-hidden="true">
+      <div class="marquee-track pixel">
+        <span>About Me</span><span>★</span><span>About Me</span><span>★</span><span>About Me</span><span>★</span><span>About Me</span><span>★</span>
+        <span>About Me</span><span>★</span><span>About Me</span><span>★</span><span>About Me</span><span>★</span><span>About Me</span><span>★</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT / LEVEL 01 ============ -->
+    <section id="about" class="level starry">
+      <div class="level-grid">
+        <div class="level-head reveal">
+          <p class="pixel pink-txt big">Level<br />01</p>
+          <p class="pixel pink-txt">Meet the player</p>
+          <p class="pixel green-txt name">Prachiti<br />Palande</p>
+        </div>
+
+        <div class="console reveal">
+          <div class="console-top">
+            <div class="console-cam"></div>
+            <div class="console-screen">
+              <div class="pixel-avatar bob" data-scale="7"></div>
+              <span class="twinkle t1">★</span><span class="twinkle t2">★</span>
+            </div>
+          </div>
+          <div class="console-hinge"></div>
+          <div class="console-bottom">
+            <div class="dpad"><i></i><i></i></div>
+            <div class="touch"></div>
+            <div class="abxy"><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="window pwin hello reveal draggable">
+          <div class="titlebar pink"><span>Hello !!</span><span class="ctrls"><i>_</i><i class="x">×</i></span></div>
+          <div class="win-body pixel-sm">
+            <p><b>Player:</b> Prachiti Palande</p>
+            <p><b>Class:</b> AI &amp; Data Science</p>
+            <p><b>Mission:</b> <span class="typer" data-text="use technology to create meaningful solutions, one model at a time."></span></p>
+            <p><b>Traits:</b> driven · curious · debate-ready</p>
+            <p><b>Status:</b> <span class="blink-dot"></span> ready to explore, build and win.</p>
+          </div>
+        </div>
+
+        <div class="window pwin weapons reveal draggable">
+          <div class="titlebar pink"><span>Weapons Mastery</span><span class="ctrls"><i>_</i><i class="x">×</i></span></div>
+          <div class="win-body">
+            <div class="chips">
+              <span>Python</span><span>R</span><span>SQL</span><span>PyTorch</span><span>TensorFlow</span><span>Keras</span>
+              <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>OpenCV</span><span>MediaPipe</span><span>Matplotlib</span>
+              <span>Amazon Bedrock</span><span>Amazon S3</span><span>Amazon Textract</span><span>UiPath</span><span>Selenium</span>
+              <span>MySQL</span><span>SQLite</span><span>Power BI</span><span>Metabase</span><span>Django</span><span>Vercel</span><span>Figma</span><span>Canva</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="window pwin training reveal draggable">
+          <div class="titlebar pink"><span>Training Log</span><span class="ctrls"><i>_</i><i class="x">×</i></span></div>
+          <div class="win-body pixel-sm">
+            <ul class="log">
+              <li><b>M.Sc. Computer Science</b> (Negotiated Learning)<br />University College Dublin · 2026 →</li>
+              <li><b>B.E. AI &amp; Data Science</b><br />SIES Graduate School of Technology · 2021–25 · <span class="hl">GPA 9.01</span></li>
+              <li><b>HSC</b> · V.G. Vaze College · 2021 · <span class="hl">93.80%</span></li>
+              <li><b>SSC</b> · St. John the Baptist High School · 2019 · <span class="hl">90.80%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="window pwin skills reveal draggable">
+          <div class="titlebar pink"><span>Skills Mastery</span><span class="ctrls"><i>_</i><i class="x">×</i></span></div>
+          <div class="win-body pixel-sm">
+            <div class="stat"><span>Machine Learning</span><div class="bar"><i data-w="92"></i></div></div>
+            <div class="stat"><span>Generative AI / LLMs</span><div class="bar"><i data-w="90"></i></div></div>
+            <div class="stat"><span>Data Analysis</span><div class="bar"><i data-w="94"></i></div></div>
+            <div class="stat"><span>Computer Vision</span><div class="bar"><i data-w="85"></i></div></div>
+            <div class="stat"><span>Automation / RPA</span><div class="bar"><i data-w="88"></i></div></div>
+            <div class="stat"><span>Leadership</span><div class="bar"><i data-w="86"></i></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pixel-ground" aria-hidden="true">
+        <span class="coin">●</span><span class="coin">●</span><span class="coin">●</span><span class="pipe"></span><span class="coin">●</span><span class="coin">●</span><span class="flag">⚑</span>
+      </div>
+    </section>
+
+    <div class="checker" aria-hidden="true"></div>
+
+    <!-- ============ QUEST LOG / EXPERIENCE ============ -->
+    <section id="quests" class="quests">
+      <div class="notebook reveal">
+        <div class="holes" aria-hidden="true"></div>
+        <p class="eyebrow center">WHERE I'VE BEEN LEVELLING UP</p>
+        <h2 class="display center sm">QUEST LOG</h2>
+
+        <div class="quest-tabs" role="tablist">
+          <button class="quest-tab active" role="tab" data-q="0">
+            <span class="qdate"><b>OCT '25</b><b>→ JUL '26</b></span>
+            <span class="qico">🤖</span>
+            <span class="qname">Exponentia.ai</span>
+            <span class="qrole">Gen AI Intern</span>
+          </button>
+          <button class="quest-tab" role="tab" data-q="1">
+            <span class="qdate"><b>JUL '25</b><b>→ OCT '25</b></span>
+            <span class="qico">⚙️</span>
+            <span class="qname">Ergode IT Services</span>
+            <span class="qrole">Data Science Intern</span>
+          </button>
+          <button class="quest-tab" role="tab" data-q="2">
+            <span class="qdate"><b>JUN '24</b><b>→ APR '25</b></span>
+            <span class="qico">🚢</span>
+            <span class="qname">Anglo-Eastern</span>
+            <span class="qrole">IT Intern</span>
+          </button>
+          <button class="quest-tab" role="tab" data-q="3">
+            <span class="qdate"><b>FEB '24</b><b>→ MAR '24</b></span>
+            <span class="qico">📊</span>
+            <span class="qname">MedTourEasy</span>
+            <span class="qrole">Data Analytics Trainee</span>
+          </button>
+          <svg class="circle-mark" viewBox="0 0 120 150" aria-hidden="true"><ellipse cx="60" cy="75" rx="54" ry="70" /></svg>
+        </div>
+
+        <div class="quest-panels">
+          <article class="quest-panel active">
+            <h3>Gen AI Intern · <a href="https://www.exponentia.ai/" target="_blank" rel="noopener">Exponentia.ai</a> <small>Vikhroli, Mumbai</small></h3>
+            <ul>
+              <li>Built GenAI prototypes with LLMs and prompt engineering to automate summarisation, query handling and content generation.</li>
+              <li>Helped ship a deployment-ready, end-to-end intelligent data-processing solution for a client.</li>
+              <li>Fine-tuned models and validated outputs with domain teams, turning raw generative responses into structured insights that supported decisions.</li>
+            </ul>
+          </article>
+          <article class="quest-panel">
+            <h3>Data Science Intern · <a href="https://www.ergode.com/" target="_blank" rel="noopener">Ergode IT Services</a> <small>Andheri, Mumbai</small></h3>
+            <ul>
+              <li>Built and deployed RPA bots with UiPath and Selenium to automate web data extraction and cut manual collection.</li>
+              <li>Built end-to-end automated workflows for invoice processing and report generation.</li>
+              <li>Cleaned and analysed bot-extracted data in Python and Excel, then built dashboards and visualisations in Metabase.</li>
+            </ul>
+          </article>
+          <article class="quest-panel">
+            <h3>IT Intern · <a href="https://www.angloeastern.com/" target="_blank" rel="noopener">Anglo-Eastern Maritime Services</a> <small>Turbhe, Navi Mumbai</small></h3>
+            <ul>
+              <li>Built an intelligent document-processing pipeline with OCR and NLP to extract structured data from PDFs and images.</li>
+              <li>Designed a confidence-score error-handling framework that flagged ambiguous extractions for human review.</li>
+              <li>Built a method-similarity app for a whole codebase, taking the runtime from O(n²) to O(n log n).</li>
+              <li>Set up a human-in-the-loop cycle where verified corrections became new training data, so the model kept improving and produced fewer exceptions.</li>
+            </ul>
+          </article>
+          <article class="quest-panel">
+            <h3>Data Analytics Trainee · <a href="https://www.medtoureasy.com/" target="_blank" rel="noopener">MedTourEasy</a> <small>Remote</small></h3>
+            <ul>
+              <li>Ran a full analytics project on whether lifespan differs between right-handed and left-handed people.</li>
+              <li>Did the data cleaning, statistical analysis and hypothesis testing under a project mentor.</li>
+              <li>Delivered the final report, sharpening my data-analysis and reporting skills.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="psst reveal">
+        <p>PSST! I'M OPEN TO AI / DATA ROLES &amp; COLLABS IN IRELAND</p>
+        <a href="#contact" class="btn btn-maroon">Say hi</a>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="projects">
+      <div class="projects-head reveal">
+        <p class="eyebrow">BUILDS · EXPERIMENTS · SIDE QUESTS</p>
+        <h2 class="display">Your problem called.<br />It wants <em>AI!</em></h2>
+        <div class="badges">
+          <span class="badge scallop peach"><b>4+</b><small>internships</small></span>
+          <span class="badge flower maroon"><b>1</b><small>paper</small></span>
+          <span class="badge rounded pink"><b>9.01</b><small>GPA</small></span>
+        </div>
+      </div>
+
+      <div class="polaroids">
+        <a class="polaroid reveal" href="https://github.com/ppalande1903/virtualkeyboard" target="_blank" rel="noopener" style="--r:-3deg">
+          <span class="tape"></span>
+          <div class="pic pic-pink"><span>👁️⌨️</span></div>
+          <h3>Virtual Keyboard</h3>
+          <p>A gaze-based keyboard that tracks eye movement and types when you blink. Built for accessibility.</p>
+          <div class="tools"><span>Python</span><span>OpenCV</span><span>MediaPipe</span></div>
+          <span class="go">view on github ↗</span>
+        </a>
+        <a class="polaroid reveal" href="https://github.com/ppalande1903/nearlaw" target="_blank" rel="noopener" style="--r:2.5deg">
+          <span class="tape"></span>
+          <div class="pic pic-blue"><span>⚖️📍</span></div>
+          <h3>NearLaw</h3>
+          <p>A legal-tech platform that connects clients with lawyers, with location-based lawyer search and case info.</p>
+          <div class="tools"><span>Python</span><span>Django</span><span>HTML/CSS</span><span>JS</span></div>
+          <span class="go">view on github ↗</span>
+        </a>
+        <a class="polaroid reveal" href="https://github.com/ppalande1903/PPAM" target="_blank" rel="noopener" style="--r:-1.5deg">
+          <span class="tape"></span>
+          <div class="pic pic-lav"><span>💸📈</span></div>
+          <h3>Personal Finance Dashboard</h3>
+          <p>An expense-tracking dashboard with visualisations and predictive analysis for financial insights.</p>
+          <div class="tools"><span>Python</span><span>Power BI</span><span>Excel</span><span>Scikit-learn</span></div>
+          <span class="go">view on github ↗</span>
+        </a>
+        <div class="polaroid reveal" style="--r:3deg">
+          <span class="tape"></span>
+          <div class="pic pic-peach"><span>🤟✨</span></div>
+          <h3>Sign Language Recognition</h3>
+          <p>Translates sign-language gestures into text in real time so more people can communicate.</p>
+          <div class="tools"><span>Python</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span></div>
+          <span class="go muted">repo coming soon</span>
+        </div>
+        <a class="polaroid reveal" href="https://github.com/ppalande1903/talentscout" target="_blank" rel="noopener" style="--r:-2.5deg">
+          <span class="tape"></span>
+          <div class="pic pic-green"><span>🤖💼</span></div>
+          <h3>TalentScout AI</h3>
+          <p>An LLM hiring assistant that screens candidates and generates technical questions for their tech stack.</p>
+          <div class="tools"><span>Streamlit</span><span>LLMs</span><span>Prompt Eng.</span></div>
+          <span class="go">view on github ↗</span>
+        </a>
+        <a class="polaroid reveal" href="https://github.com/ppalande1903/windscope-chatbot" target="_blank" rel="noopener" style="--r:1.5deg">
+          <span class="tape"></span>
+          <div class="pic pic-pink"><span>💬🌬️</span></div>
+          <h3>Windscope Chatbot</h3>
+          <p>A simple conversational chatbot built with LangChain.</p>
+          <div class="tools"><span>Python</span><span>LangChain</span></div>
+          <span class="go">view on github ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee boom" aria-hidden="true">
+      <div class="marquee-track serif rev">
+        <span>HIRE ME</span><span>✸</span><span>BUILD WITH ME</span><span>✸</span><span>HIRE ME</span><span>✸</span><span>BUILD WITH ME</span><span>✸</span>
+        <span>HIRE ME</span><span>✸</span><span>BUILD WITH ME</span><span>✸</span><span>HIRE ME</span><span>✸</span><span>BUILD WITH ME</span><span>✸</span>
+      </div>
+    </div>
+
+    <!-- ============ PUBLICATION + ACHIEVEMENTS ============ -->
+    <section id="trophies" class="trophies">
+      <div class="trophy-grid">
+        <div class="pub reveal">
+          <h2 class="script">Published<br />Research</h2>
+          <p class="by">By <b>Palande</b>, Chavan &amp; Chavan · June 2025</p>
+          <h3>Comparative Analysis of Eye-Tracking Keyboards: MediaPipe vs. DLIB for Gaze-Based Typing</h3>
+          <p>We benchmarked two facial-landmark approaches for hands-free typing: MediaPipe and DLIB. The comparison covers gaze accuracy, blink detection and typing performance, with the goal of making keyboards more accessible.</p>
+          <p class="authors">Prachiti Palande, Mukta Chavan, Priyadarshini Chavan</p>
+        </div>
+        <div class="arch reveal">
+          <div class="arch-inner">
+            <div class="pixel-avatar" data-scale="6"></div>
+          </div>
+          <p>by <b>Prachiti</b></p>
+          <a href="https://www.linkedin.com/in/prachiti-palande-947842284" target="_blank" rel="noopener">CLICK TO CONNECT</a>
+        </div>
+      </div>
+
+      <div class="achievements">
+        <p class="eyebrow center light">🏆 ACHIEVEMENTS UNLOCKED</p>
+        <div class="ach-row">
+          <div class="ach reveal"><span class="ach-ico">⚡</span><b>aiXplain Hackathon</b><small>Developer · 2025</small></div>
+          <div class="ach reveal"><span class="ach-ico">🐦</span><b>Woodpecker's Hackathon</b><small>Advanced to Round 2 · 2024</small></div>
+          <div class="ach reveal"><span class="ach-ico">🎤</span><b>Squabble Debate</b><small>Competitor · 2022 &amp; 2023</small></div>
+          <div class="ach reveal"><span class="ach-ico">🌐</span><b>SIESGST MUN</b><small>Director, Design</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="checker pinkcheck" aria-hidden="true"></div>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+      <span class="sticker c1" data-depth="10">🍒</span>
+      <span class="sticker c2" data-depth="14">🧸</span>
+      <span class="sticker c3" data-depth="8">🍭</span>
+      <div class="heart-note" aria-hidden="true"><span>just a lil<br />something<br />sweet</span></div>
+      <div class="cloud-card reveal">
+        <p class="tag">PLAYER 2 · JOIN THE PARTY</p>
+        <h2 class="display">Let's build something <em>sweet</em></h2>
+        <p class="lede center">Hiring for AI, ML or data roles? Want to collaborate, or just talk models over coffee in Dublin? My inbox is always open.</p>
+        <div class="contact-links">
+          <a class="btn btn-maroon" href="mailto:prachitipalande191@gmail.com">✉ prachitipalande191@gmail.com</a>
+        </div>
+        <div class="contact-links">
+          <a class="btn btn-lav" href="https://www.linkedin.com/in/prachiti-palande-947842284" target="_blank" rel="noopener">in · LinkedIn</a>
+          <a class="btn btn-pink" href="https://github.com/ppalande1903" target="_blank" rel="noopener">⌥ GitHub</a>
+          <button class="btn btn-peach" id="copyEmail" type="button">⧉ copy email</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER / TASKBAR ============ -->
+  <footer class="taskbar">
+    <button class="tb-start" id="tbStart">❀ start</button>
+    <span class="tb-item">🌐 welcome 2 my world.html</span>
+    <span class="tb-item hide-sm">✉ new message (1)</span>
+    <span class="tb-spacer"></span>
+    <span class="tb-tray">© 2026 Prachiti Palande · <span id="clock">--:--</span></span>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
