@@ -465,7 +465,7 @@ img { max-width: 100%; }
 .quest-tab .qico::after { content: "★"; bottom: 2px; right: -18px; }
 .quest-tab.active .qico::before, .quest-tab.active .qico::after { animation: tw 1.2s steps(3) infinite; opacity: 1; }
 .quest-tab.active .qico::after { animation-delay: -.6s; }
-.qname { font-family: var(--f-serif); font-size: 1.3rem; line-height: 1.1; text-align: center; }
+.qname { font-family: var(--f-vt); font-size: 1.75rem; line-height: 1; letter-spacing: .02em; text-align: center; }
 .qrole { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; text-align: center; }
 .quest-indicator {
   position: absolute; left: 0; bottom: -18px; width: 25%; height: 8px; pointer-events: none;
@@ -477,7 +477,7 @@ img { max-width: 100%; }
 .quest-panel { display: none; }
 .quest-panel.active { display: block; animation: slideup .45s ease; }
 @keyframes slideup { from { opacity: 0; transform: translateY(14px); } }
-.quest-panel h3 { font-family: var(--f-serif); font-weight: 400; font-size: 1.5rem; color: var(--maroon); margin-bottom: .8rem; }
+.quest-panel h3 { font-family: var(--f-vt); font-weight: 400; font-size: 2rem; line-height: 1.1; color: var(--maroon); margin-bottom: .8rem; }
 .quest-panel h3 a { text-decoration: none; background: linear-gradient(var(--pink), var(--pink)) 0 88% / 100% 35% no-repeat; }
 .quest-panel h3 a:hover { color: var(--cherry); }
 .quest-panel h3 small { font-family: var(--f-mono); font-size: .7rem; color: var(--cherry); margin-left: 6px; }
