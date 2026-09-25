@@ -687,3 +687,9 @@ img { max-width: 100%; }
 
 /* quest log title in the same y2k screen font as its tabs */
 .notebook .display { font-family: var(--f-vt); font-size: clamp(3.2rem, 7vw, 5rem); line-height: .9; letter-spacing: .04em; }
+
+/* featured project */
+.polaroid.featured { grid-column: span 2; }
+.polaroid.featured .pic { height: 170px; }
+.new-badge { position: absolute; top: 10px; right: -10px; z-index: 2; font-family: var(--f-pixel); font-size: .55rem; background: var(--hot); color: #fff; padding: 6px 8px; border: 2px solid var(--maroon); transform: rotate(8deg); animation: wiggle 1.6s ease-in-out infinite; }
+@media (max-width: 620px) { .polaroid.featured { grid-column: auto; } }
