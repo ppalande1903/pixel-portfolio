@@ -513,9 +513,9 @@ img { max-width: 100%; }
 @keyframes slowspin { to { transform: rotate(360deg); } }
 .badge.rounded { background: var(--pink); border-radius: 18px; border: 2px dashed var(--maroon); }
 
-.polaroids { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2.5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.polaroids { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 2.5rem 2rem; max-width: 1200px; margin: 0 auto; }
 .polaroid {
-  position: relative; display: block; text-decoration: none; color: var(--ink);
+  position: relative; display: flex; flex-direction: column; text-decoration: none; color: var(--ink);
   background: #fff; padding: 14px 14px 18px;
   border: 2px solid var(--maroon); box-shadow: 6px 6px 0 var(--maroon);
   transform: rotate(var(--r, 0deg));
@@ -535,7 +535,7 @@ img { max-width: 100%; }
 .polaroid p { font-size: .8rem; line-height: 1.55; margin-bottom: 10px; }
 .tools { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .tools span { font-size: .62rem; font-weight: 700; padding: 3px 7px; background: var(--pink); border-radius: 4px; color: var(--maroon); }
-.go { font-family: var(--f-hand); font-size: 1.35rem; color: var(--cherry); }
+.go { margin-top: auto; font-family: var(--f-hand); font-size: 1.35rem; color: var(--cherry); }
 .go.muted { color: #b0798a; }
 
 /* =========================================================
@@ -688,8 +688,8 @@ img { max-width: 100%; }
 /* quest log title in the same y2k screen font as its tabs */
 .notebook .display { font-family: var(--f-vt); font-size: clamp(3.2rem, 7vw, 5rem); line-height: .9; letter-spacing: .04em; }
 
-/* featured project */
-.polaroid.featured { grid-column: span 2; }
-.polaroid.featured .pic { height: 170px; }
+/* four equal project cards, then a link to everything else */
+@media (max-width: 1000px) { .polaroids { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .polaroids { grid-template-columns: 1fr; } }
+.more-projects { text-align: center; margin-top: 3rem; }
 .new-badge { position: absolute; top: 10px; right: -10px; z-index: 2; font-family: var(--f-pixel); font-size: .55rem; background: var(--hot); color: #fff; padding: 6px 8px; border: 2px solid var(--maroon); transform: rotate(8deg); animation: wiggle 1.6s ease-in-out infinite; }
-@media (max-width: 620px) { .polaroid.featured { grid-column: auto; } }
