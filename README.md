@@ -13,6 +13,7 @@ The look is candy-cart × Y2K desktop × pixel game: scalloped candy headers on 
 - 📈 XP bar that levels up as you scroll
 - ⬆⬆⬇⬇⬅➡⬅➡BA: try it
 - Respects `prefers-reduced-motion`, responsive down to phone width
+- 🔎 Ready for search and sharing: title and description, a link-preview image (`assets/og-image.png`), structured data about who the page is about, a favicon Google can show, `robots.txt` and `sitemap.xml`
 
 ## Run locally
 No build step. It's plain HTML/CSS/JS.
@@ -26,6 +27,8 @@ Drop your résumé at `assets/Prachiti_Palande_Resume.pdf`. The **Download résu
 ## Deploy
 - **GitHub Pages:** Settings → Pages → Deploy from branch `main`, folder `/ (root)`
 - **Vercel:** import the repo; no config needed
+
+The canonical URL, link-preview tags, structured data, `robots.txt` and `sitemap.xml` all use `https://prachiti-palande.vercel.app/`. If the site moves to another address, change it in those places.
 
 ## Links
 - LinkedIn: https://www.linkedin.com/in/prachiti-palande-947842284

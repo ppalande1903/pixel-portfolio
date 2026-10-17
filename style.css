@@ -133,7 +133,7 @@ img { max-width: 100%; }
   animation: floaty 2.5s ease-in-out infinite;
 }
 .boot-title {
-  font-family: var(--f-pixel); font-size: clamp(1.9rem, 8vw, 5rem);
+  font-family: var(--f-pixel); font-size: clamp(1.9rem, 8vw, 5rem); font-weight: bold;
   color: var(--hot); margin: 1.2rem 0 2rem;
   text-shadow: 5px 5px 0 var(--green);
   letter-spacing: .04em;
